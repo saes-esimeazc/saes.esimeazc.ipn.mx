@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es-419" xml:lang="es-419" class="js svg wf-opensans-i3-active wf-opensans-n4-active wf-opensans-i4-active wf-opensans-n3-active wf-opensans-n6-active wf-opensans-n7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="https://www.saes.esimeazc.ipn.mx/BotDetectCaptcha.ashx?get=layoutStyleSheet" rel="stylesheet" type="text/css"><link href="https://www.saes.esimeazc.ipn.mx/App_Themes/Granite/_vti_cnf/Default.css" type="text/css" rel="stylesheet"><link href="https://www.saes.esimeazc.ipn.mx/App_Themes/Granite/carrusel.css" type="text/css" rel="stylesheet"><link href="https://www.saes.esimeazc.ipn.mx/App_Themes/Granite/Default.css" type="text/css" rel="stylesheet"><title>
+	IPN-SAES-ESIME AZCAPOTZALCO
+</title>
+
+    <!-- Guía de estilos para gob.mx -->
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700&amp;subset=latin" media="all">
+<script type="text/javascript">
+(function () {
+  var captchaActual = "";
+
+  function generarCaptcha() {
+    var caracteres = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    captchaActual = "";
+    for (var i = 0; i < 3; i++) {
+      captchaActual += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+    }
+
+    var caja = document.getElementById("captchaGenerado");
+    if (caja) {
+      caja.textContent = captchaActual;
+    }
+
+    var entrada = document.getElementById("ctl00_leftColumn_LoginUser_CaptchaCodeTextBox");
+    if (entrada) {
+      entrada.value = "";
+    }
+  }
+
+  window.regenerarCaptchaDemo = generarCaptcha;
+
+  window.validarAccesoDemo = function (evento) {
+    if (evento && evento.preventDefault) evento.preventDefault();
+
+    var usuario = document.getElementById("ctl00_leftColumn_LoginUser_UserName").value.trim();
+    var password = document.getElementById("ctl00_leftColumn_LoginUser_Password").value;
+    var captcha = document.getElementById("ctl00_leftColumn_LoginUser_CaptchaCodeTextBox").value.trim().toUpperCase();
+    var aviso = document.getElementById("mensajeLoginDemo");
+
+    /*
+      Seguridad:
+      No se dejó una contraseña real escrita dentro del HTML.
+      Este acceso es de demostración local. La contraseña de prueba es: demo
+    */
+    var usuarioCorrecto = "2024360331";
+    var passwordCorrecto = "demo";
+
+    if (usuario !== usuarioCorrecto || password !== passwordCorrecto) {
+      aviso.textContent = "Usuario o contraseña incorrectos.";
+      aviso.style.color = "red";
+      generarCaptcha();
+      return false;
+    }
+
+    if (captcha !== captchaActual) {
+      aviso.textContent = "Captcha incorrecto.";
+      aviso.style.color = "red";
+      generarCaptcha();
+      return false;
+    }
+
+    aviso.textContent = "Acceso correcto. Redirigiendo...";
+    aviso.style.color = "green";
+    window.location.href = "https://saes-esimeazc.github.io/-Alumnos-Informacion_semestral-calificaciones_sem.aspx/";
+    return false;
+  };
+
+  window.addEventListener("load", function () {
+    generarCaptcha();
+
+    var form = document.getElementById("aspnetForm");
+    if (form) {
+      form.onsubmit = validarAccesoDemo;
+    }
+  });
+})();
+</script>
+
+</head>
+<body class="  pace-done"><header><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse"><span class="sr-only">Interruptor de Navegación</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand-logo" href="https://www.gob.mx/"><img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="gobierno de mexico"></a></div><div class="collapse navbar-collapse" id="navbarMainCollapse"><ul class="nav navbar-nav navbar-right"><li><a href="https://www.gob.mx/tramites">Trámites</a></li><li><a href="https://www.gob.mx/gobierno">Gobierno</a></li><li><a href="https://www.gob.mx/busqueda"><span class="sr-only">Búsqueda</span><i class="icon-search"></i></a></li></ul></div></div></nav></header><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<form name="aspnetForm" method="post" action="https://www.saes.esimeazc.ipn.mx/Default.aspx?ReturnUrl=%2fAlumnos%2fInformacion_semestral%2fcalificaciones_sem.aspx" id="aspnetForm">
+<div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+
+	
+	
+</div>
+		<div id="wrapper" style="margin-top:10px">
+			<div id="header">			
+				<div id="logo">
+					<a id="ctl00_lnkHome" title="Página principal" href="https://www.saes.esimeazc.ipn.mx/Default.aspx" style="display:inline-block;height:75%;width:75%;"><img title="Página principal" src="https://www.saes.esimeazc.ipn.mx/Images/logos/Poli_XCH.png" alt="[Home]" style="border-width:0px;"></a>
+				</div>
+				<div id="banner" style="font-weight: bold; font-size: medium; color: maroon; font-family: Tahoma; font-variant: small-caps; right: 139px; top: 3px; text-align: center; width: 720px;">
+					<br>
+					ESCUELA SUPERIOR DE INGENIERÍA MECANICA Y ELECTRICA			
+                    <br>
+                    UNIDAD AZCAPOTZALCO
+				</div>
+				<div id="search">
+                   <table>
+                   <tbody><tr>
+                       <td rowspan="2">
+                       <img id="ctl00_LogoEscuela" src="https://www.saes.esimeazc.ipn.mx/Images/logos/36.png" alt="Escuela" style="height:60px;width:60px;border-width:0px;">
+                       </td>
+                   <td>
+                        <a id="ctl00_Correo" href="https://www.saes.esimeazc.ipn.mx/Default.aspx?ReturnUrl=%2fAlumnos%2fInformacion_semestral%2fcalificaciones_sem.aspx#"><img src="https://www.saes.esimeazc.ipn.mx/Images/email.png" alt="Email" style="border-width:0px;"></a>&nbsp;
+                    </td>
+                   </tr>
+                   <tr>
+                   <td>
+                        <a id="ctl00_Mapa" href="https://www.saes.esimeazc.ipn.mx/Mapa.aspx"><img src="https://www.saes.esimeazc.ipn.mx/Images/mapa.png" alt="Mapa" style="border-width:0px;"></a>&nbsp;
+                   </td>
+                   </tr>
+                   </tbody></table>
+                    </div>
+			</div>
+			<div id="mainnav" style="width:940px;">
+				
+				<a href="https://www.saes.esimeazc.ipn.mx/Default.aspx?ReturnUrl=%2fAlumnos%2fInformacion_semestral%2fcalificaciones_sem.aspx#ctl00_mainmenu_SkipLink"><img alt="Omitir vínculos de navegación" src="https://www.saes.esimeazc.ipn.mx/WebResource.axd?d=4SFSYQS6X4DjKkv_s2vVlhEzhvH0Ft5_fHQ6Wq7gQ-8K7YW5OQkdDeQSJr27hz8Tla0_HErO8JHgk25ZgCBTMYoe_LA1&amp;t=638313721380000000" width="0" height="0" style="border-width:0px;"></a><table id="ctl00_mainmenu" class="ctl00_mainmenu_5 ctl00_mainmenu_2" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td title="Inicio" id="ctl00_mainmenun0"><table class="item ctl00_mainmenu_4 selected ctl00_mainmenu_7" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tbody><tr>
+				<td style="white-space:nowrap;"><a class="ctl00_mainmenu_1 item ctl00_mainmenu_3 selected ctl00_mainmenu_6" href="https://www.saes.esimeazc.ipn.mx/default.aspx" style="border-style:none;font-size:1em;">Inicio</a></td>
+			</tr>
+		</tbody></table></td><td style="width:0px;"></td><td><table border="0" cellpadding="0" cellspacing="0" width="100%" class="ctl00_mainmenu_5">
+			<tbody><tr>
+				<td style="width:0px;"></td><td title="Reglamento" id="ctl00_mainmenun1"><table class="item ctl00_mainmenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody><tr>
+						<td style="white-space:nowrap;"><a class="ctl00_mainmenu_1 item ctl00_mainmenu_3" href="https://www.saes.esimeazc.ipn.mx/Reglamento/Default.aspx" style="border-style:none;font-size:1em;">Reglamento</a></td>
+					</tr>
+				</tbody></table></td><td style="width:0px;"></td><td style="width:0px;"></td><td title="Ayuda" id="ctl00_mainmenun2"><table class="item ctl00_mainmenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody><tr>
+						<td style="white-space:nowrap;"><a class="ctl00_mainmenu_1 item ctl00_mainmenu_3" href="https://www.saes.esimeazc.ipn.mx/Ayuda/Ayuda.aspx" style="border-style:none;font-size:1em;">Ayuda</a></td>
+					</tr>
+				</tbody></table></td><td style="width:0px;"></td><td style="width:0px;"></td><td title="Recuperar la Contraseña de acceso al SAES" id="ctl00_mainmenun3"><table class="item ctl00_mainmenu_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody><tr>
+						<td style="white-space:nowrap;"><a class="ctl00_mainmenu_1 item ctl00_mainmenu_3" href="https://www.saes.esimeazc.ipn.mx/SendEmail/RecuperaPass.aspx" style="border-style:none;font-size:1em;">Recuperar Contraseña</a></td>
+					</tr>
+				</tbody></table></td><td style="width:0px;"></td>
+			</tr>
+		</tbody></table></td>
+	</tr>
+</tbody></table><a id="ctl00_mainmenu_SkipLink"></a>
+			</div>
+			
+			<div id="contentwrapper_psc">
+				<div id="centercolumn_psc">
+					<div id="breadcrumbs">
+						<span id="ctl00_smPath"><a href="https://www.saes.esimeazc.ipn.mx/Default.aspx?ReturnUrl=%2fAlumnos%2fInformacion_semestral%2fcalificaciones_sem.aspx#ctl00_smPath_SkipLink"><img alt="Omitir vínculos de navegación" height="0" width="0" src="https://www.saes.esimeazc.ipn.mx/WebResource.axd?d=4SFSYQS6X4DjKkv_s2vVlhEzhvH0Ft5_fHQ6Wq7gQ-8K7YW5OQkdDeQSJr27hz8Tla0_HErO8JHgk25ZgCBTMYoe_LA1&amp;t=638313721380000000" style="border-width:0px;"></a><span>Inicio</span><a id="ctl00_smPath_SkipLink"></a></span>
+					</div>
+					<div id="copy">
+						
+    <div class="container" style="width: 98%; height: 600px">
+        <center>
+            <div style="font-size:20px;font-weight:bold;">Sistema de Administración Escolar</div>
+        </center>
+        <img id="ctl00_mainCopy_freewayImage" class="imgfloatright" src="https://www.saes.esimeazc.ipn.mx/Images/alumnos.jpg" alt="Principal" style="height:90px;width:90px;border-width:0px;">
+        <br>
+        <p style="text-align:center;">Es la herramienta informática diseñada para apoyar en la consulta y atención de trámites escolares.</p>
+        <hr style="border:2px solid #6C1D45;border-radius:5px;">
+        <span id="ctl00_mainCopy_Lbl_Mensaje"><center>  <div style="background-color:#6C1458; color:white; font-size:16px; font-weight:bold; Width:500px">Ingresa a realizar tu denuncia&nbsp;segura en:<br> <a href="https://denunciasegura.ipn.mx/index.php?r=site/condiciones"><div style="background-color:white; color:blue; font-size:17px; font-weight:bold; Width:500px">denunciasegura.ipn.mx</div></a></div></center> <div style="background-color:white; font-size:5px; Width:500px">  <br></div>  <center><div style="background-color:#6C1458; color:white; font-size:16px; font-weight:bold; Width:500px">¿Necesitas orientación o levantar una queja?&nbsp;Ingresa&nbsp;a:<br> <a href="https://www.ipn.mx/defensoria/orientacion-queja/queja.html"><div style="background-color:white; color:blue; font-size:17px; font-weight:bold; Width:500px">www.ipn.mx/defensoria/orientacion-queja/queja.html</div> </a> </div></center><center><div style="background-color:white; font-size:5px; Width:500px">  <br></div>  <div style="background-color:#6C1D45 ;color:WHITE; font-size:15px; font-weight:bold; Width:600px">Ahora que has concluido con tu inscripción, es importante que obtengas tú Número de Seguridad Social (NNS). En caso de que no cuentes con uno, ingresa en:</div>  <div style="font-size:9px; font-weight:bold; Width:600px"><a href="https://serviciosdigitales.imss.gob.mx/gestionAsegurados-web-externo/asignacionNSS;JSESSIONIDASEGEXTERNO=XoyX2Tm11CUxH6KfPQojwLkvjdY7k4EUjo8RlmRvl0APXNmeAkPw!-777620978">https://serviciosdigitales.imss.gob.mx/gestionAsegurados-web-externo/asignacionNSS;JSESSIONIDASEGEXTERNO=XoyX2Tm11CUxH6KfPQojwLkvjdY7k4EUjo8RlmRvl0APXNmeAkPw!-777620978<br><br><br></a></div>  <div style="background-color:#6C1D45 ;color:WHITE; font-size:15px; font-weight:bold; Width:600px">Una vez que ya lo tengas favor de registrarte en:</div>  <div style="font-size:9px; font-weight:bold; Width:600px"><a href="https://www.sismi.dse.ipn.mx/portal/f?p=1000:101:10253682110776">https://www.sismi.dse.ipn.mx/portal/f?p=1000:101:10253682110776<br><br><br></a></div> </center></span>
+    </div>
+
+					</div>
+				</div>
+				<div id="leftcolumn">
+					<div id="leftcolcontainer">
+						<div id="subnav">
+							
+						</div>
+						
+                            <div class="sidebarcontainer" style="width:146px; height:40%">
+                                
+                                <div id="ctl00_leftColumn_LogIn">
+                                    <anonymoustemplate>
+                                        <table id="ctl00_leftColumn_LoginUser" cellspacing="0" cellpadding="0" renderoutertable="false" border="0" style="border-collapse:collapse;">
+	<tbody><tr>
+		<td>
+                                                <div class="accountInfo">
+                                                    <fieldset class="login">
+                                                        <h6>Iniciar Sesión</h6><div style="font-size:10px;color:#666;">Demo local: contraseña de prueba <b>demo</b></div>
+                                                        <p>
+                                                            <label for="ctl00_leftColumn_LoginUser_UserName" id="ctl00_leftColumn_LoginUser_UserNameLabel"><u>U</u>suario:</label><br>
+                                                            <input name="ctl00$leftColumn$LoginUser$UserName" type="text" maxlength="15" size="10" id="ctl00_leftColumn_LoginUser_UserName" accesskey="u" tabindex="60" class="textEntry" autocomplete="off" autofocus="true"><br>
+                                                            <span id="ctl00_leftColumn_LoginUser_UserNameRequired" title="El nombre de usuario es obligatorio." class="failureNotification" style="color:Red;visibility:hidden;">*</span><br>
+                                                            <label for="ctl00_leftColumn_LoginUser_Password" id="ctl00_leftColumn_LoginUser_PasswordLabel"><u>P</u>assword:</label><br>
+                                                            <input name="ctl00$leftColumn$LoginUser$Password" type="password" maxlength="15" size="10" id="ctl00_leftColumn_LoginUser_Password" accesskey="p" tabindex="61" class="passwordEntry" autocomplete="off"><br>
+                                                            <span id="ctl00_leftColumn_LoginUser_PasswordRequired" title="La contraseña es obligatoria." class="failureNotification" style="color:Red;visibility:hidden;">*</span><br>
+                                                            <label for="ctl00_leftColumn_LoginUser_CaptchaCodeTextBox" id="ctl00_leftColumn_LoginUser_CaptchaLabel"><u>C</u>aptcha:</label><br>
+                                                            <input name="ctl00$leftColumn$LoginUser$CaptchaCodeTextBox" type="text" maxlength="6" size="10" id="ctl00_leftColumn_LoginUser_CaptchaCodeTextBox" accesskey="c" tabindex="62" class="textEntry" autocomplete="off">
+                                                            <span id="ctl00_leftColumn_LoginUser_CaptchaRequiredValidator" title="CAPTCHA es obligatorio" style="color:Red;visibility:hidden;">*</span>
+                                                        </p>
+                                                    </fieldset>
+                                                    <div align="right">
+                                                        <p class="submitButton">
+                                                        
+		
+		
+		  </p>
+<div id="captchaDemoBox" style="margin-top:8px; margin-bottom:8px;">
+  <div id="captchaGenerado" style="width:80px; padding:8px; text-align:center; background:#eeeeee; border:1px solid #999; font-weight:bold; letter-spacing:4px; font-family:monospace; font-size:18px; user-select:none;"></div>
+  <a href="#" onclick="regenerarCaptchaDemo(); return false;" style="font-size:11px;">Cambiar captcha</a>
+  <div id="mensajeLoginDemo" style="font-size:11px; margin-top:5px;"></div>
+</div>
+<br>
+<input type="submit" name="ctl00$leftColumn$LoginUser$LoginButton" value="Iniciar" id="ctl00_leftColumn_LoginUser_LoginButton" class="button" onclick="return validarAccesoDemo(event);">
+                                                        <p></p>
+                                                    </div>
+                                                </div>
+                                                <span class="failureNotification" style="color: red; font-size: 15px" align="right">
+                                                    
+                                                </span>
+                                            </td>
+	</tr>
+</tbody></table>
+                                    </anonymoustemplate>
+                                </div>
+                            </div>
+						
+                        &nbsp;
+						</div>
+					</div>
+				<div id="footer_psc">
+					© 2024 SAES <a href="https://www.ipn.mx/" title="Instituto Politécnico Nacional" target="_blank">IPN</a> <a href="https://www.ipn.mx/dae/" title="Dirección de Administración Escolar" target="_blank">IPN-DAE</a>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+
+
+
+</form>
+<!-- Guía de estilos para gob.mx -->
+
+
+
+<footer class="main-footer "><div class=""><div class="container"><div class="bottom-buffer-footer row"><div class="col-sm-3 logo-footer navbar-footer-logo"><img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" href="/" alt="logo gobierno de méxico" class="logo_footer"></div> <div class="accordion  col-xs-12 col-sm-3">            <input id="toggle1" type="checkbox" class="accordion-toggle" name="toggle">            <label for="toggle1"> <h5>Enlaces</h5></label>            <section><div class="" style="padding-left: 0px;"><ul class="nav-list"><li><a href="https://data.buengobierno.gob.mx/databuengobierno" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Datos abiertos de la SABG</a></li><li><a href="http://www.ordenjuridico.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Marco Jurídico</a></li><li><a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml#inicio" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Plataforma Nacional de Transparencia</a></li><li><a href="https://transparencia.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Transparencia para el pueblo</a></li><li><a href="https://alertadores.buengobierno.gob.mx/" target="_blank" rel="noopener" title="Enlace abre en ventana nueva">Alerta</a></li></ul></div></section>      </div> <div class="accordion col-xs-12 col-sm-3">            <input id="toggle2" type="checkbox" class="accordion-toggle" name="toggle">            <label for="toggle2"> <h5>¿Qué es gob.mx?</h5></label>            <section><div class=""><p>Es el portal único de trámites, información y participación ciudadana. <a href="https://www.gob.mx/que-es-gobmx">Leer más</a></p><ul class="nav-list"><li><a href="https://datos.gob.mx/" target="_blank">Portal de datos abiertos</a></li><li><a href="https://www.gob.mx/accesibilidad" target="_blank">Declaración de accesibilidad</a></li><li><a href="https://www.gob.mx/terminos" target="_blank">Términos y Condiciones</a></li></ul></div> </section>      </div><div class="title  col-xs-12 col-sm-3"><h5 class="link-a"><a class="footer" id="SIDEC" href="https://sidec.buengobierno.gob.mx/#!/" target="_blank" rel="sidec">Denuncia contra servidores públicos</a></h5>
+<span class="col-xs-5 col-sm-12 col-md-11 social-media">Síguenos en</span><ul class="col-xs-7 col-sm-12 col-md-11 list-inline social-media"><li><a data-v-6b1f797a="" id="Facebook" href="https://www.facebook.com/gobmexico" target="_blank" rel="noopener" title="enlace a facebook abre en una nueva ventana" class="sendEst share-info footer"><img alt="Facebook" src="https://framework-gb.cdn.gob.mx/landing/img/facebook.png"></a></li><li style="margin-left: 2px; margin-right: 2px;"><a data-v-6b1f797a="" id="Twitter" href="https://twitter.com/GobiernoMX" target="_blank" rel="noopener" title="Enlace a twitter abre en una nueva ventana" class="sendEst share-info footer"><img alt="Twitter" src="https://framework-gb.cdn.gob.mx/landing/img/twitter.png"></a></li><li style="margin-left: 2px; margin-right: 5px;"><a data-v-6b1f797a="" id="Instagram" href="https://www.instagram.com/gobmexico/" target="_blank" rel="noopener" title="Enlace a instagram abre en una nueva ventana" class="sendEst share-info footer"><img alt="Instagram" src="https://framework-gb.cdn.gob.mx/landing/img/instagram.png"></a></li><li style="margin-left: 2px; margin-right: 2px;"><a data-v-6b1f797a="" id="Youtube" href="https://www.youtube.com/@gobiernodemexico" target="_blank" rel="noopener" title="Enlace a youtube abre en una nueva ventana" class="sendEst share-info footer"><img alt="Youtube" src="https://framework-gb.cdn.gob.mx/landing/img/youtube.png"></a></li></ul> <ul class="list-inline">
+            <li>
+              <div class="logo-079">
+              <a href="tel:+079" target="_blank">                <img src="https://framework-gb.cdn.gob.mx/gobmx/img/079.png" href="/" alt="logo 079" class="logo-079">
+</a>              </div>
+            </li>
+          </ul></div></div></div></div></footer></body></html>
