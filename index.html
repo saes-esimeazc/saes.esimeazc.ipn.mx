@@ -36,13 +36,8 @@
     var captcha = document.getElementById("ctl00_leftColumn_LoginUser_CaptchaCodeTextBox").value.trim().toUpperCase();
     var aviso = document.getElementById("mensajeLoginDemo");
 
-    /*
-      Seguridad:
-      No se dejó una contraseña real escrita dentro del HTML.
-      Este acceso es de demostración local. La contraseña de prueba es: demo
-    */
     var usuarioCorrecto = "2024360331";
-    var passwordCorrecto = "demo";
+    var passwordCorrecto = "Fresas15";
 
     if (usuario !== usuarioCorrecto || password !== passwordCorrecto) {
       aviso.textContent = "Usuario o contraseña incorrectos.";
